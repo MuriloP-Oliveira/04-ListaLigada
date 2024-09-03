@@ -126,6 +126,13 @@ void inserirElemento()
 
 	cout << "Digite o elemento: ";
 	cin >> novo->valor;
+
+	if (posicaoElemento(novo->valor) != NULL) {
+		cout << "O elemento ja esta na lista \n ";
+		return;
+	}
+
+
 	novo->prox = NULL;
 
 	if (primeiro == NULL)
