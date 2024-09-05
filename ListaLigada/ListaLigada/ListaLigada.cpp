@@ -157,7 +157,23 @@ void excluirElemento()
 
 void buscarElemento()
 {
-	
+	NO* novo = (NO*)malloc(sizeof(NO));
+	if (novo == NULL)
+	{
+		return;
+	}
+
+	cout << "Digite o elemento: ";
+	cin >> novo->valor;
+
+	if (posicaoElemento(novo->valor) != NULL) {
+		cout << "O elemento esta na lista \n ";
+		return;
+	}
+
+	else {
+		cout << "O elemento nao esta na lista \n";
+	}
 }
 
 
