@@ -14,7 +14,7 @@ Ao concluir esta atividade você deverá ter compreendido os seguintes conceitos
 Faça um fork deste repositorio e realize as seguintes atividades: 
 
 - [X] Altere a função inserirElemento para impedir que sejam inseridos valores duplicados
-- [ ] Implemente as funções buscarElemento e excluirElemento
+- [X] Implemente as funções buscarElemento e excluirElemento
 
 **(use a função auxiliar posicaoElemento)**
 
