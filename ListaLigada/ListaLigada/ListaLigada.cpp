@@ -152,11 +152,49 @@ void inserirElemento()
 
 void excluirElemento()
 {
-	
+	if (primeiro == NULL) {
+		cout << "Lista vazia \n";
+		return;
+	}
+	else {
+		NO* excluir = (NO*)malloc(sizeof(NO));
+		if (excluir == NULL)
+		{
+			return;
+		}
+		cout << "Digite o elemento que deseja excluir: ";
+		cin >> excluir->valor;
+
+		NO* aux = primeiro;
+		NO* antes = NULL;
+
+		while (aux != NULL) {
+			NO* OExcluir = aux;
+			if (aux->valor == excluir->valor) {
+				if (antes == NULL) {
+					primeiro = aux->prox;
+				}
+				else {
+					antes->prox = aux->prox;
+				}
+				free(OExcluir);
+				cout << "Elemento excluido\n";
+				return;
+			}
+			antes = aux;
+			aux = aux->prox;
+		}
+		cout << "O elemento nao esta na lista \n";
+	}
 }
 
 void buscarElemento()
 {
+	if (primeiro == NULL) {
+		cout << "Lista vazia \n";
+		return;
+	}
+
 	NO* novo = (NO*)malloc(sizeof(NO));
 	if (novo == NULL)
 	{
